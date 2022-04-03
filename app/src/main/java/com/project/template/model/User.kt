@@ -61,3 +61,5 @@ sealed class UserDetailUIState {
     data class Success(var user: User?) : UserDetailUIState()
     data class Failure(var exception: Throwable) : UserDetailUIState()
 }
+
+data class Dummy(var name: String, var email: String)

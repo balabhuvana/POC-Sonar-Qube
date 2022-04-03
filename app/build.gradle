@@ -106,3 +106,26 @@ dependencies {
     kapt 'com.google.dagger:hilt-compiler:2.41'
 
 }
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Project-Template"
+        property "sonar.projectKey", "Project-Template"
+        property "sonar.tests", ["src/test/java"]
+        property "sonar.test.inclusions", "**/*Test*/**"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.login", "08dbde73b1b83eb9a0c5f93e79ba7bc29f9f0e48"
+        property "sonar.sources", "src/main/java"
+        property "sonar.exclusions", '**/.gradle/**,' +
+                "**/androidTest/**," +
+                "**/R.class," +
+                "**/BuildConfig.*," +
+                "**/Manifest*.*," +
+                "**/android/databinding/*," +
+                "**/androidx/databinding/*," +
+                "**/*MapperImpl*.*," +
+                "**/BuildConfig.*," +
+                "**/Manifest*.*," +
+                "**/google-services.json"
+    }
+}
